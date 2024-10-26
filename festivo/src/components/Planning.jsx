@@ -43,7 +43,7 @@ const Planning = () => {
 
   const getBudget = async (uid) => {
     try {
-      const res = await axios.get(`http://localhost:5000/budget/${uid}`);
+      const res = await axios.get(`https://festivo.onrender.com/budget/${uid}`);
       if (res.data !== null) {
         setRemainingBudget(res.data.remainingBudget || 0);
         setExpenses(res.data.expenses || []);
@@ -59,7 +59,7 @@ const Planning = () => {
   const getVendors = async (uid) => {
     try {
       const res = await axios.get(
-        `http://127.0.0.1:5000/vendors/getVendorByPrice/${uid}`
+        `https://festivo.onrender.com/vendors/getVendorByPrice/${uid}`
       );
       if (res.data.status === 200) {
         setVendors(res.data.data);
@@ -72,7 +72,7 @@ const Planning = () => {
   const getVendorDetails = async (expenses) => {
     const promises = expenses.map(async (expense) => {
       const res = await axios.get(
-        `http://localhost:5000/vendors/getVendor/${expense.vid}`
+        `https://festivo.onrender.com/vendors/getVendor/${expense.vid}`
       );
       return { ...res.data.data, expenseId: expense._id };
     });
@@ -92,7 +92,7 @@ const Planning = () => {
   }, [expenses]);
 
   const setBudget = async (budget) => {
-    const res = await axios.post(`http://localhost:5000/budget/${uid}`, {
+    const res = await axios.post(`https://festivo.onrender.com/budget/${uid}`, {
       budget,
       remainingBudget: budget,
     });
@@ -108,7 +108,7 @@ const Planning = () => {
   const clearExpanses = async (uid) => {
     if (confirm("are you sure?")) {
       await axios
-        .delete(`http://localhost:5000/budget/${uid}/expenses`)
+        .delete(`https://festivo.onrender.com/budget/${uid}/expenses`)
         .then(location.reload())
         .catch((err) => console.log(err.message));
     }
@@ -117,7 +117,7 @@ const Planning = () => {
   const resetBudget = async (uid) => {
     if (confirm("are you sure?")) {
       await axios
-        .delete(`http://localhost:5000/budget/${uid}/reset`)
+        .delete(`https://festivo.onrender.com/budget/${uid}/reset`)
         .then(location.reload())
         .catch((err) => console.log(err.message));
     }
