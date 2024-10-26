@@ -74,7 +74,7 @@ const Vendor = () => {
   const getAllVendors = (category) => {
     category.map(async (cat) => {
       await axios
-        .get(`http://localhost:5000/vendors/${cat}&${4}`)
+        .get(`https://festivo.onrender.com/vendors/${cat}&${4}`)
         .then((res) => {
           if (cat === "Venue") {
             setVenues(res.data.data);
@@ -92,7 +92,7 @@ const Vendor = () => {
 
   const findVendor = async (name) => {
     await axios
-      .get(`http://localhost:5000/vendors/getByName/${name}`)
+      .get(`https://festivo.onrender.com/vendors/getByName/${name}`)
       .then((res) => navigate(`/vendor/${res.data.data._id}`))
       .catch((err) => console.log(err));
   };
