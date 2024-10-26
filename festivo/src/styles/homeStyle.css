@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: #F4F3EE;
+    color: #463F3A;
+}
+
+video {
+    opacity: 100%;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+#topCard {
+    color: #463F3A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F4F3EE;
+    font-size: 1.8rem;
+    padding: 80px;
+    font-family: "myfont";
+}
+
+#txt4 {
+    opacity: 0%;
+}
+
+.scrollBtn {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    margin: 90px 50px;
+    padding: 10px 20px;
+    font-size: 8px;
+    letter-spacing: 5px;
+    background-color: #8a817c99;
+    color: #F4F3EE;
+    border-radius: 20px;
+    border: 1.3px solid #F4F3EE;
+    font-family: "myfont";
+}
+
+.scrollBtn img {
+    width: 25px;
+    height: 20px;
+    filter: invert();
+}
+
+.topContent {
+    display: flex;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sectionCard {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #463F3A;
+    color: #F4F3EE;
+}
+
+.sectionCard:nth-child(3) {
+    background-color: #BCB8B1;
+    color: #463F3A;
+}
+
+.sectionCard.reverse {
+    flex-direction: row-reverse;
+}
+
+.sectionCardLeft {
+    width: 50%;
+    text-align: justify;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 6rem;
+}
+
+.sectionCardLeft p {
+    margin-top: 25px;
+}
+
+.sectionCardRight {
+    width: 50%;
+}
+
+.sectionCardRight img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 1024px) {
+    #topCard {
+        font-size: 1.6rem;
+        padding: 60px;
+    }
+
+    .scrollBtn {
+        margin: 70px 40px;
+        padding: 8px 18px;
+        font-size: 7px;
+        letter-spacing: 4px;
+    }
+
+    .scrollBtn img {
+        width: 22px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .topContent {
+        padding-top: 6rem;
+        height: 50vh;
+    }
+
+    #topCard {
+        font-size: 1.4rem;
+        padding: 40px;
+    }
+
+    video {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .scrollBtn {
+        margin: 40px 30px;
+        padding: 6px 14px;
+        font-size: 6px;
+        letter-spacing: 3px;
+    }
+
+    .scrollBtn img {
+        width: 20px;
+        height: 16px;
+    }
+
+    .sectionCard {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sectionCardLeft, .sectionCardRight {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .sectionCardRight img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #topCard {
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+
+    .scrollBtn {
+        margin: 30px 20px;
+        padding: 5px 10px;
+        font-size: 5px;
+        letter-spacing: 2px;
+    }
+
+    .scrollBtn img {
+        width: 18px;
+        height: 14px;
+    }
+
+    .sectionCard, .sectionCard:nth-child(3){
+        flex-direction: column;
+    }
+}

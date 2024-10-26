@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/indinaFunction.jpg");
+    overflow-y: auto;
+}
+
+.main h2 {
+    padding-bottom: 10px;
+    color: #463F3A;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    mix-blend-mode: multiply;
+}
+
+.main form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #463F3A;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.main form input[type=text],
+.main form input[type=number],
+.main form select {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #BCB8B1;
+    color: #463F3A;
+    font-family: "mainfont";
+}
+
+.main form label{
+    color: #BCB8B1;
+    font-family: "mainfont";
+}
+
+.main form input[type=file]{
+    padding: 15px 0;
+    color: #BCB8B1;
+    font-family: "mainfont";
+}
+
+.image_preview {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image_preview img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+button {
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background-color: #BCB8B1;
+    color: #463F3A;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color .5s ease;
+}

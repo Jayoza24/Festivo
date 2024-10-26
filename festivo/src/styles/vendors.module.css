@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    padding-bottom: 8rem;
+}
+
+#loading {
+    width: 100%;
+    height: 100vh;
+    padding-top: 6rem;
+    object-fit: contain;
+}
+
+.top {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.top img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.searchBar {
+    width: 40%;
+    position: absolute;
+    bottom: 15%;
+    background: #f4f3ee5f;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .3);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    align-items: center;
+}
+
+.searchBar i {
+    padding: 20px;
+    color: #463F3A;
+}
+
+.searchBar input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 20px;
+    background-color: transparent;
+    font-family: "mainfont";
+    color: #463F3A;
+}
+
+.searchBar input::placeholder {
+    color: #463F3A;
+    font-family: "mainfont";
+}
+
+.searchBar input:focus {
+    outline: none;
+}
+
+.venuePart, .catersPart, .photoPart {
+    padding: 0 70px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.venuePart {
+    margin-top: 7rem;
+}
+
+.catersPart {
+    flex-direction: row-reverse;
+}
+
+.left {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left video {
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px #463f3a40;
+}
+
+.left h1 {
+    text-align: center;
+    font-family: "myfont";
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.right {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.line {
+    width: 40%;
+    height: 50px;
+    transform: translate(75%);
+    object-fit: cover;
+    margin: 80px 0;
+    display: flex;
+}
+
+.others {
+    margin: 0 80px;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.others .otherCard {
+    margin: 10px;
+    padding: 50px;
+    background-color: #463F3A;
+    color: #F4F3EE;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.otherCard:hover {
+    color: #463F3A;
+    font-size: 20px;
+    padding: 80px;
+    background-position: center;
+}
+
+.otherCard:nth-child(1):hover {
+    background-image: url('../assets/lightingShopBanner.jpg');
+    background-size: cover;
+}
+
+.otherCard:nth-child(2):hover {
+    background-image: url('../assets/flowerShopBanner.jpg');
+    background-size: cover;
+}
+
+.otherCard:nth-child(3):hover {
+    background-image: url('../assets/makupShopBanner.jpg');
+    background-size: cover;
+}
+
+.otherCard:nth-child(4):hover {
+    background-image: url('../assets/designerShopBanner.jpg');
+    background-size: cover;
+    color: #F4F3EE;
+}
+
+.otherCard:nth-child(5):hover {
+    background-image: url('../assets/djShopBanner.jpg');
+    background-size: cover;
+    color: #F4F3EE;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .searchBar {
+        width: 60%;
+        bottom: 10%;
+    }
+
+    .venuePart, .catersPart, .photoPart {
+        padding: 0 50px;
+    }
+
+    .others {
+        margin: 0 60px;
+    }
+
+    .left {
+        width: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+    .searchBar {
+        width: 70%;
+        bottom: 8%;
+    }
+
+    .venuePart, .catersPart, .photoPart {
+        padding: 0 40px;
+    }
+
+    .others {
+        margin: 0 50px;
+    }
+
+    .left {
+        width: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    .searchBar {
+        width: 80%;
+        bottom: 6%;
+    }
+
+    .venuePart, .catersPart, .photoPart {
+        padding: 0 30px;
+    }
+
+    .others {
+        margin: 0 40px;
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        width: 65%;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .searchBar {
+        width: 90%;
+        bottom: 5%;
+    }
+
+    .venuePart, .catersPart, .photoPart {
+        padding: 0 20px;
+        overflow: scroll;
+    }
+
+    .others {
+        margin: 0 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .otherCard {
+        padding: 30px;
+    }
+}

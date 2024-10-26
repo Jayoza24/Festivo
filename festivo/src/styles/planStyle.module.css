@@ -1,0 +1,99 @@
+.mainPlan{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    font-family: "mainFont";
+    background-color: #F4F3EE;
+    padding-top: 6rem;
+}
+
+.noPlan img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    background-color: aqua;
+}
+
+.texts{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #463f3aa9;
+    font-family: "myfont";
+    font-size: 2rem;
+    color: #F4F3EE;
+    text-wrap: wrap;
+}
+
+.texts h1{
+    cursor: pointer;
+}
+
+.btnPlan{
+    background-color: #f4f3eec3;
+    color: #463F3A;
+    font-size: 15px;
+    letter-spacing: 5px;
+    padding: 10px 50px;
+    border-radius: 50px;
+    border: 4px double #463F3A;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.btnPlan:hover{
+    background-color: #463F3Ac3;
+    color: #F4F3EE;
+    border-color: #F4F3EE;
+}
+
+.mainContent{
+    position: relative;
+    padding: 20px 40px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #463F3A;
+}
+
+.right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.right button{
+    font-size: 12px;
+
+}
+
+#emptyImg{
+    height: 50vh;
+    
+}
+
+.vendorCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.expanseList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.categorySection h3{
+    margin: 20px 0px;
+}

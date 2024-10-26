@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: relative;
+  transition: all 0.8s;
+  transform: scale(0.8);
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: white;
+  
+  .img img{
+    scale: .98;
+  }
+}
+
+.img img {
+  width: 100%;
+  height: 250px;
+  max-height: 190px;
+  border-radius: 6px;
+  object-fit: cover;
+  transition: all .5s;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 5px 0;
+}
+
+.price, .priceDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5px;
+}
+
+.priceDetails span {
+  color: #BCB8B1;
+  font-size: 12px;
+}
+
+.price p {
+  color: #463F3A;
+  font-size: 14px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.name p {
+  font-size: 16px;
+}
+
+.name p:nth-child(1) {
+  flex-grow: 2;
+  flex-shrink: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.name p:nth-child(2) {
+  color: #8A817C;
+  font-size: 12px;
+  width: 80px;
+  text-align: right;
+}
+
+#vName{
+  color: #463F3A;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    transform: scale(1);
+    margin: 10px auto;
+    opacity: 1;
+  }
+
+  .img img {
+    max-height: 150px;
+  }
+
+  .price p, .priceDetails span, .name p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    padding: 5px;
+    opacity: 1;
+  }
+
+  .img img {
+    max-height: 120px;
+  }
+
+  .price p, .priceDetails span, .name p {
+    font-size: 10px;
+  }
+
+  .name p:nth-child(2) {
+    font-size: 10px;
+  }
+}

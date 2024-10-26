@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haldi Ceremony Invitation</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap");
+
+      body {
+        font-family: "Georgia", serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #ffcccc 0%, #ff9966 100%);
+      }
+
+      #invitation-card {
+        width: 400px;
+        background: url("https://i.pinimg.com/originals/4e/2b/c4/4e2bc44c3b75911ba63de05372f2df0b.jpg") no-repeat center center;
+        background-size: cover;
+        border-radius: 20px;
+        padding: 30px;
+        text-align: center;
+        color: #fff;
+        border: 4px solid #d4af37;
+        box-sizing: border-box;
+      }
+
+      .header {
+        font-size: 26px;
+        font-weight: bold;
+        color: #ffd700;
+        margin-top: 20px;
+        font-family: "Dancing Script", cursive;
+      }
+
+      .sub-header {
+        font-size: 20px;
+        font-style: italic;
+        color: #ffe4b5;
+        margin-top: 10px;
+      }
+
+      .couple-names {
+        font-size: 36px;
+        font-family: "Great Vibes", cursive;
+        color: #ffeb3b;
+        margin-top: 50px;
+      }
+
+      .event-details {
+        font-size: 18px;
+        color: #ffdead;
+        margin-top: 40px;
+      }
+
+      .footer {
+        font-size: 16px;
+        color: #ffa07a;
+        margin-top: 20px;
+      }
+
+      .haldi {
+        width: 60px;
+        height: 60px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="invitation-card">
+      <div class="header">Join Us for a Haldi Ceremony!</div>
+      <div class="sub-header">Celebrate the Colors of Love</div>
+
+      <div class="couple-names">{{couple_names}}</div>
+
+      <div class="event-details">
+        <p>{{event_date}}</p>
+        <p>{{event_location}}</p>
+        <p>{{event_time}}</p>
+      </div>
+
+      <div class="footer">
+        <p>Let's smear some love and laughter!</p>
+        <p>Food and fun will follow!</p>
+      </div>
+    </div>
+  </body>
+</html>

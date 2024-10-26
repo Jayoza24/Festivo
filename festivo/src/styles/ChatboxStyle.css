@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.chatbox {
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  width: 300px;
+}
+
+.chatbox__support {
+  display: none; /* Hide the chatbox by default */
+  flex-direction: column;
+  background: #BCB8B1;
+  width: 100%;
+  height: 350px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s ease-in-out;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 2px 2px 20px #463F3A;
+}
+
+.chatbox--active {
+  display: flex; /* Show the chatbox when active */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chatbox__button {
+  text-align: right;
+}
+
+.send__button {
+  padding: 6px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.chatbox__header {
+  display: flex;
+  background-color: #463F3A;
+  color: #F4F3EE;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: var(--primaryBoxShadow);
+  border-radius: 10px;
+}
+
+.chatbox__header img {
+  width: 80px;
+}
+
+.chatbox__header p {
+  margin-left: 10px;
+}
+
+.chatbox__messages {
+  margin-top: auto;
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column-reverse;
+  padding-bottom: 20px;
+}
+
+.messages__item {
+  margin-top: 10px;
+  background-color: #F4F3EE;
+  padding: 8px 12px;
+  max-width: 95%;
+  border-radius: 15px;
+}
+
+.messages__item--operator {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: var(--primary);
+  background-color: #F4F3EE;
+}
+
+.messages__item--visitor {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #E0AFA0;
+}
+
+.chatbox__footer {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+}
+
+.chatbox__footer input {
+  width: 75%;
+  height: 2rem;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 30px;
+  text-align: left;
+  background-color: #463F3A;
+  color: #F4F3EE;
+}
+
+.chatbox__send--footer {
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: #463F3A solid 1.5px;
+  background: var(--primary);
+  background-color: #F4F3EE;
+  color: #463F3A;
+}
+
+.chatbox__button button {
+  padding: 5px;
+  background: #463F3A;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.chatbox__button button img {
+  width: 2rem;
+  border-radius: 50px;
+}
