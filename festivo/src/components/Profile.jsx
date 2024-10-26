@@ -42,7 +42,7 @@ const Profile = (props) => {
 
     try {
       await axios.post(
-        `http://localhost:5000/api/users/profile/image/${props.uid}`,
+        `https://festivo.onrender.com/api/users/profile/image/${props.uid}`,
         formData,
         {
           headers: {
@@ -96,7 +96,7 @@ const Profile = (props) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/emails/upload",
+        "https://festivo.onrender.com/api/emails/upload",
         formData,
         {
           headers: {
@@ -126,7 +126,7 @@ const Profile = (props) => {
     };
 
     try {
-      await axios.post("http://localhost:5000/api/emails/dispatch", {
+      await axios.post("https://festivo.onrender.com/api/emails/dispatch", {
         validEmails,
         message,
       });
@@ -142,7 +142,7 @@ const Profile = (props) => {
   const getProfileImage = async (uid) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/users/profile/image/${uid}`
+        `https://festivo.onrender.com/api/users/profile/image/${uid}`
       );
       setProfileImage(response.data);
     } catch (error) {
@@ -158,7 +158,7 @@ const Profile = (props) => {
           <img
             src={
               profileImage !== ""
-                ? `http://localhost:5000/uploads/profile/${profileImage}`
+                ? `https://festivo.onrender.com/uploads/profile/${profileImage}`
                 : noProfile
             }
             alt="Profile Pic"
