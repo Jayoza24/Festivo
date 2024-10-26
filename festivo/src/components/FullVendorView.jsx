@@ -32,7 +32,7 @@ const FullVendorView = (props) => {
     window.scrollTo(0,0);
     try {
       const res = await axios.get(
-        `http://localhost:5000/vendors/getVendor/${id}`
+        `https://festivo.onrender.com/vendors/getVendor/${id}`
       );
       if (res) {
         setVendor(res.data.data);
@@ -193,7 +193,7 @@ const FullVendorView = (props) => {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/vendors/addVendorImages/${id}`,
+        `https://festivo.onrender.com/vendors/addVendorImages/${id}`,
         formData
       );
       setVendorImages(res.data.vendor.images.reverse());
@@ -212,7 +212,7 @@ const FullVendorView = (props) => {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/vendors/addComment/${id}`,
+        `https://festivo.onrender.com/vendors/addComment/${id}`,
         { username: props.user, comment: newComment }
       );
       console.log(res.data);
@@ -246,7 +246,7 @@ const FullVendorView = (props) => {
             <img
               ref={bgImgRef}
               id="bgImg"
-              src={`http://localhost:5000/uploads/vendors/${vendor.bg}`}
+              src={`https://festivo.onrender.com/uploads/vendors/${vendor.bg}`}
               alt="vendor image"
             />
             <div className={style.details} ref={titleBoxRef}>
@@ -273,7 +273,7 @@ const FullVendorView = (props) => {
               <img
                 ref={addtoRefs}
                 key={index}
-                src={`http://localhost:5000/uploads/vendors/${img}`}
+                src={`https://festivo.onrender.com/uploads/vendors/${img}`}
                 alt="img"
                 onClick={() => handleImageClick(img)}
               />
@@ -328,7 +328,7 @@ const FullVendorView = (props) => {
                 {vendorImages.map((img, index) => (
                   <img
                     key={index}
-                    src={`http://localhost:5000/uploads/vendors/${img}`}
+                    src={`https://festivo.onrender.com/uploads/vendors/${img}`}
                     alt="img"
                     onClick={() => handleImageClick(img)}
                   />
@@ -340,7 +340,7 @@ const FullVendorView = (props) => {
           {fullscreenImage && (
             <div className={style.fullscreenOverlay} onClick={closeFullscreen}>
               <img
-                src={`http://localhost:5000/uploads/vendors/${fullscreenImage}`}
+                src={`https://festivo.onrender.com/uploads/vendors/${fullscreenImage}`}
                 alt="fullscreen"
                 className={style.fullscreenImage}
               />
