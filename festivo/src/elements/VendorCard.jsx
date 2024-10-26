@@ -126,7 +126,7 @@ const VendorCard = (props) => {
   const addToPlan = async (uid, vid, category) => {
     const price = extractPrice(props.vendorData.vendorDetails, category);
     await axios
-      .post(`http://localhost:5000/budget/${uid}/expenses`, {
+      .post(`https://festivo.onrender.com/budget/${uid}/expenses`, {
         vid,
         category,
         price,
@@ -153,7 +153,7 @@ const VendorCard = (props) => {
       <div className={style.img}>
         <img
           className={style.bg}
-          src={`http://localhost:5000/uploads/vendors/${props.vendorData.bg}`}
+          src={`https://festivo.onrender.com/uploads/vendors/${props.vendorData.bg}`}
           alt="Vendor Image"
         />
       </div>
