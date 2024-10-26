@@ -75,7 +75,7 @@ const AddVendors = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/vendors/addVendor",
+        "https://festivo.onrender.com/vendors/addVendor",
         formData,
         {
           headers: {
