@@ -26,7 +26,7 @@ const Login = () => {
         e.preventDefault();
         try {
             const { data } = await axios.post(
-                "http://localhost:5000/api/users/login",
+                "https://festivo.onrender.com/api/users/login",
                 { username, password }
             );
             localStorage.setItem("userInfo", JSON.stringify(data));
@@ -39,7 +39,7 @@ const Login = () => {
     const handleSignUp = async(e) =>{
         e.preventDefault();
         try {
-            const { data } = await axios.post('http://localhost:5000/api/users/register', { username, email, password });
+            const { data } = await axios.post('https://festivo.onrender.com/api/users/register', { username, email, password });
             localStorage.setItem('userInfo', JSON.stringify(data));
             navigate('/');
         } catch (error) {
