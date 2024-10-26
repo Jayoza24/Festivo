@@ -21,7 +21,7 @@ const VendorByCategory = () => {
   const getData = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/vendors/${category}&0`
+        `https://festivo.onrender.com/vendors/${category}&0`
       );
       setData(res.data.data || []);
     } catch (err) {
