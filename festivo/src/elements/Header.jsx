@@ -38,8 +38,12 @@ const Header = (props) => {
       </div>
       <div className={`${style.right} ${isOpen ? style.active : ""}`}>
         <a href="/">Home</a>
-        <a href="/vendors">Vendors</a>
-        <a href="/planning">Planning</a>
+        <a onClick={() => {
+            navigate("/vendors");
+          }}>Vendors</a>
+        <a onClick={() => {
+            navigate("/planning");
+          }}>Planning</a>
         <button
           onClick={() => {
             navigate("/profile");
